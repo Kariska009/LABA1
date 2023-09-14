@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Запрос общей суммы продаж за месяц у пользователя
+var totalSales = parseFloat(prompt("Введите общую сумму продаж за месяц:"));
+
+// Проверка на корректный ввод
+if (isNaN(totalSales) || totalSales < 0) {
+    alert("Некорректный ввод. Введите положительное число.");
+} else {
+    // Расчет зарплаты: $250 + 10% от продаж
+    var baseSalary = 250;
+    var commission = 0.10 * totalSales;
+    var salary = baseSalary + commission;
+    
+    // Вывод результата
+    alert("Зарплата работника: $" + salary.toFixed(2));
+}
+    </script>
+</body>
+</html>

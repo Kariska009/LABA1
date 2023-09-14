@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Запрос трехзначного числа у пользователя
+        var number = parseInt(prompt("Введите трехзначное число:"));
+
+        // Проверка на корректный ввод
+        if (isNaN(number) || number < 100 || number > 999) {
+            alert("Некорректный ввод. Введите трехзначное число.");
+        } else {
+            // Используем оператор % для получения второй цифры
+            var secondDigit = Math.floor((number / 10) % 10);
+
+            // Вывод второй цифры
+            alert("Вторая цифра числа: " + secondDigit);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Запрос пятизначного числа у пользователя
+        var number = parseInt(prompt("Введите пятизначное число:"));
+
+        // Проверка на корректный ввод
+        if (isNaN(number) || number < 10000 || number > 99999) {
+            alert("Некорректный ввод. Введите пятизначное число.");
+        } else {
+            // Извлекаем последнюю цифру
+            var lastDigit = number % 10;
+
+            // Удаляем последнюю цифру из исходного числа
+            number = Math.floor(number / 10);
+
+            // Сдвигаем последнюю цифру в начало
+            number = lastDigit * 10000 + number;
+
+            // Вывод результата
+            alert("Число после перемещения последней цифры: " + number);
+        }
+
+
+    </script>
+</body>
+
+</html>

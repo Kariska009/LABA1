@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Запрос текущего времени у пользователя
+        var currentHour = parseInt(prompt("Введите текущее время (часы):"));
+        var currentMinute = parseInt(prompt("Введите текущее время (минуты):"));
+
+        // Проверка на ввод корректных значений
+        if (isNaN(currentHour) || isNaN(currentMinute) || currentHour < 0 || currentHour > 23 || currentMinute < 0 || currentMinute > 59) {
+            alert("Некорректный ввод времени.");
+        } else {
+            // Вычисление времени до следующего дня
+            var remainingHours = 24 - currentHour - 1;
+            var remainingMinutes = 60 - currentMinute;
+
+            // Вывод результата
+            alert("До следующего дня осталось " + remainingHours + " часов и " + remainingMinutes + " минут.");
+        }
+
+
+
+    </script>
+</body>
+
+</html>
